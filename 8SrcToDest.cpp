@@ -6,9 +6,7 @@ using namespace std;
 #define N 4 
 #define M 4 
 
-  
-// QItem for current location and distance 
-// from source location 
+
 
 class QItem { 
 
@@ -38,9 +36,6 @@ int minDistance(char grid[N][M])
 
   
 
-    // To keep track of visited QItems. Marking 
-
-    // blocked cells as visited. 
 
     bool visited[N][M]; 
 
@@ -60,7 +55,7 @@ int minDistance(char grid[N][M])
 
   
 
-            // Finding source 
+      
 
             if (grid[i][j] == 's') 
 
@@ -78,7 +73,7 @@ int minDistance(char grid[N][M])
 
   
 
-    // applying BFS on matrix cells starting from source 
+ 
 
     queue<QItem> q; 
 
@@ -94,7 +89,7 @@ int minDistance(char grid[N][M])
 
   
 
-        // Destination found; 
+ 
 
         if (grid[p.row][p.col] == 'd') 
 
@@ -102,7 +97,7 @@ int minDistance(char grid[N][M])
 
   
 
-        // moving up 
+    
 
         if (p.row - 1 >= 0 && 
 
@@ -116,7 +111,6 @@ int minDistance(char grid[N][M])
 
   
 
-        // moving down 
 
         if (p.row + 1 < N && 
 
@@ -130,7 +124,6 @@ int minDistance(char grid[N][M])
 
   
 
-        // moving left 
 
         if (p.col - 1 >= 0 && 
 
@@ -144,7 +137,6 @@ int minDistance(char grid[N][M])
 
   
 
-         // moving right 
 
         if (p.col + 1 < M && 
 
@@ -162,7 +154,7 @@ int minDistance(char grid[N][M])
 } 
 
   
-// Driver code 
+
 
 int main() 
 { 
